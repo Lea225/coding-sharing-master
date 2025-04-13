@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteCode - Share Code Easily</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/theme/dracula.min.css">
+</head>
+<body>
+    <header>
+      <img class="logo" src="resources/NoteCodeLogo.svg" alt="NoteCodeLogo">
+      <h1>Create & Share</h1>
+      <h2>Your Code Easily</h2>
+    </header>
+
+    <div id="copy-notification" class="copy-notification hidden">
+      Link copied !
+  </div>
+
+    <main>
+        <div id="editor-container">
+          <textarea id="code-editor">
+            <!DOCTYPE html>
+            <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Mon Document</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    h1 { color: #406AFF; }
+                </style>
+            </head>
+            <body>
+                <h1>Bienvenue sur NoteCode</h1>
+                <p>Commencez à éditer votre code ici !</p>
+            </body>
+            </html>
+          </textarea>
+          <div id="mini-map-container"></div>
+        </div>
+        <div class="code-footer">
+          <div class="controls">
+            <select id="language-select">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+            </select>
+            <select id="theme-select">
+              <option value="vs">Light</option>
+              <option value="vs-dark">Vs Dark</option>
+            </select>
+          </div>
+          <div class="share-section hidden">
+            <button class="copy-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="copy-icon">
+                <path d="M7.75725 13.4142L5.63593 11.2929C4.07383 9.7308 4.07383 7.19814 5.63593 5.63604V5.63604C7.19803 4.07395 9.73069 4.07395 11.2928 5.63604L13.4141 7.75736" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.8282 14.8285L9.17139 9.17163" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5858 16.2426L12.7071 18.3639C14.2692 19.926 16.8019 19.926 18.364 18.3639V18.3639C19.9261 16.8019 19.9261 14.2692 18.364 12.7071L16.2426 10.5858" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+            <input id="share-url" readonly>
+        </div>
+          <button id="share-btn">
+            <img src="resources/Share.svg" alt="Share">
+            Share
+          </button>
+        </div>
+
+    </main>
+
+    <footer class="author-info">
+        <p>Coded by <a href="#">Léa CHIDAS</a> | Challenge by <a href="https://www.devchallenges.io">devChallenges.io</a></p>
+    </footer>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/python/python.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
