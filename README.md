@@ -121,5 +121,5 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Author
 
-- Website [my-website.com](https://{your-web-site-link})
+- Website [my-website.com](https://{https://lea225.github.io/coding-sharing-master/})
 - GitHub [@my-username](https://github.com/Lea225})
